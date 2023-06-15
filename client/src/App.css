@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     color: #222;
     -ms-overflow-style: none;
@@ -71,3 +75,50 @@ div.post p.summary {
     line-height: 1.4rem;
 }
 
+div.forms div.form-header {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding-bottom: 15px;
+    border-bottom: 2px solid black;
+}
+
+form.login, form.register {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+form input {
+    display: block;
+    margin-bottom: 5px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #fff;
+    border-bottom: 2px solid #aaa;
+}
+
+form input:focus {
+    outline: none;
+    border-bottom: 2px solid #777;
+}
+
+form button {
+    margin-top: 10px;
+    width: 30%;
+    border-radius: 0px;
+    border: 2px solid #aaa;
+    padding: 4px;
+    background-color: #fff;
+    color: #555;
+}
+
+form button:hover {
+    background-color: #eee;
+    border: 2px solid #777;
+}
+
+form input, form button {
+    transition: border 0.2s, background-color 0.2s;
+}
