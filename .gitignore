@@ -3,6 +3,9 @@
 # api
 /api
 
+# credentials
+.creds
+
 # dependencies
 /node_modules
 /.pnp
