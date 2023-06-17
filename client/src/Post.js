@@ -1,27 +1,26 @@
 import React from "react";
+import { format } from "date-fns";
+import { Link } from "react-router-dom";
 
-const Post = () => {
+const Post = ({ title, summary, content, image, author, createdAt }) => {
     return (
         <div className="post">
             <div className="image">
-                <img
-                    src="https://www.writingbeginner.com/wp-content/uploads/2023/02/Cartoon-blogger-on-a-laptop-How-to-write-a-blog-post-with-ChatGPT.png"
-                    alt=""
-                />
+                <Link to={"/post/id"}>
+                    <img src={"http://localhost:4000/" + image} alt="" />
+                </Link>
             </div>
             <div className="texts">
-                <h2>How to write a blog post with ChatGPT</h2>
+                <Link to={"/post/id"}>
+                    <h2>{title}</h2>
+                </Link>
                 <p className="info">
-                    <span className="author">Major</span>
-                    <span className="time">06-15-2023 10:38</span>
+                    <span className="author">{author.username}</span>
+                    <span className="time">
+                        {format(new Date(createdAt), "MMM d, yyyy - HH:mm")}
+                    </span>
                 </p>
-                <p className="summary">
-                    Ever since it was released, I've been experimenting with
-                    writing content with ChatGPT. Using my prior knowledge and
-                    experience ranking articles written with the help of other
-                    premium AI tools (such as Jasper AI), I was able to develop
-                    a 21-step workflow.
-                </p>
+                <p className="summary">{summary}</p>
             </div>
         </div>
     );
