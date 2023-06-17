@@ -1,9 +1,9 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "./UserContext";
 
 const Header = () => {
-    const {setUserInfo, userInfo} = useContext(UserContext);
+    const { setUserInfo, userInfo } = useContext(UserContext);
     const username = userInfo?.username;
 
     useEffect(() => {
@@ -19,7 +19,7 @@ const Header = () => {
     function logout() {
         fetch("http://localhost:4000/logout", {
             credentials: "include",
-            method: "POST"
+            method: "POST",
         });
         setUserInfo(null);
     }
@@ -33,7 +33,9 @@ const Header = () => {
                 {username && (
                     <>
                         <Link to="/create">Create New Post</Link>
-                        <a onClick={logout}>Logout</a>
+                        <Link to="/">
+                            <a onClick={logout}>Logout</a>
+                        </Link>
                     </>
                 )}
                 {!username && (

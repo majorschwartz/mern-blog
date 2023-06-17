@@ -52,6 +52,11 @@ div.post {
     margin-bottom: 30px;
 }
 
+div.post div.texts a {
+    color: inherit;
+    text-decoration: none;
+}
+
 div.post div.texts h2 {
     margin: 0;
     font-size: 1.4rem;
@@ -59,7 +64,7 @@ div.post div.texts h2 {
 
 div.post p.info {
     margin: 10px 0px;
-    color: #aaa;
+    color: #808080;
     font-size: 0.8rem;
     font-weight: bold;
     display: flex;
@@ -87,6 +92,50 @@ form.login, form.register {
     max-width: 400px;
     margin: 0 auto;
     margin-top: 60px;
+}
+
+div.post-page div.image {
+    max-height: 300px;
+    display: flex;
+    overflow: hidden;
+}
+
+div.post-page div.image img {
+    object-fit: cover;
+    object-position: center center;
+}
+
+div.post-page div.pre-content {
+    padding-bottom: 16px;
+    border-bottom: 2px solid black;
+}
+
+div.post-page h1.title {
+    margin-bottom: 8px;
+}
+
+div.post-page div.meta-info {
+    margin: 10px 0px;
+    color: #808080;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: flex;
+    gap: 16px;
+}
+
+div.post-page div.meta-info span.user {
+    color: #444;
+}
+
+div.post-page p.summary {
+    margin-top: 26px;
+}
+
+div.post-page a {
+    text-decoration: underline;
+    text-decoration-color: #0054dc;
+    text-decoration-style: dotted;
+    color: inherit;
 }
 
 form input {
