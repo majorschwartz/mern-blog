@@ -131,7 +131,37 @@ div.post-page p.summary {
     margin-top: 26px;
 }
 
-div.post-page a {
+div.post-page .options {
+    display: flex;
+    gap: 10px;
+}
+
+div.post-page div.option .select-button {
+    margin-top: 4px;
+    border-radius: 0px;
+    font-size: 0.8rem;
+    border: 2px solid #aaa;
+    padding: 4px 8px;
+    background-color: #fff;
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: border 0.2s, background-color 0.2s;
+}
+
+div.post-page div.option .select-button:hover {
+    background-color: #eee;
+    border: 2px solid #777;
+}
+
+div.post-page div.option .select-button svg {
+    height: 14px;
+}
+
+div.post-page div.content a {
     text-decoration: underline;
     text-decoration-color: #0054dc;
     text-decoration-style: dotted;
@@ -154,7 +184,6 @@ form input:focus {
 }
 
 form button {
-    margin-top: 10px;
     width: 30%;
     border-radius: 0px;
     border: 2px solid #aaa;
