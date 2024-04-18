@@ -49,7 +49,7 @@ const EditPost = () => {
                 setContent(postInfo.content);
             });
         });
-    }, []);
+    }, [id]);
 
     async function updatePost(e) {
         e.preventDefault();

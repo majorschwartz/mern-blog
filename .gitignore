@@ -6,6 +6,9 @@
 # variables
 .env
 
+# node
+node_modules
+
 # credentials
 .creds
 

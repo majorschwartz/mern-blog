@@ -6,6 +6,7 @@ import { UserContext } from "../UserContext";
 const PostPage = () => {
     const [postInfo, setPostInfo] = useState(null);
     const { userInfo } = useContext(UserContext);
+    const username = userInfo?.username;
     const { id } = useParams();
 
     useEffect(() => {
@@ -14,7 +15,7 @@ const PostPage = () => {
                 setPostInfo(postInfo);
             });
         });
-    }, []);
+    }, [id]);
 
     if (!postInfo) return;
 
@@ -35,7 +36,7 @@ const PostPage = () => {
                     </span>
                 </div>
                 <div className="options">
-                    {userInfo.id === postInfo.author._id && (
+                    {username && userInfo.id === postInfo.author._id && (
                         <>
                             <div className="option">
                                 <Link

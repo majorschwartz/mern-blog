@@ -16,7 +16,7 @@ const IndexPage = () => {
             {posts.length > 0 && posts.map(post => (
                 <Post {...post} />
             ))}
-            {posts.length == 0 && <div>There are no posts. Sign in and be the first to post!</div>}
+            {posts.length === 0 && <div>There are no posts. Sign in and be the first to post!</div>}
         </>
     );
 };
